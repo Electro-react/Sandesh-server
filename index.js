@@ -19,12 +19,10 @@ var id = {};
 io.on('connection', (socket) => {
   socket.on('sendId', ({ username, identity }) => {
     id[identity] = username;
-    console.log(id);
   });
   setInterval(() => socket.emit('recievedId', id), 3000);
   socket.on('disconnect', () => {
     delete id[socket.id];
-    console.log('user disconnected');
     socket.emit('recievedId', id);
     socket.broadcast.emit('callEnded');
   });
