@@ -15,6 +15,11 @@ const PORT = 5001;
 app.get('/', (req, res) => {
   res.send('Running');
 });
+
+app.get('/test', (req, res) => {
+  res.send('test is running okay');
+});
+
 var id = {};
 io.on('connection', (socket) => {
   socket.on('sendId', ({ username, identity }) => {
