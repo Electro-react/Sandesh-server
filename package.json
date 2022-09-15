@@ -1,22 +1,25 @@
 {
-	"name": "videochat",
-	"version": "1.0.0",
-	"description": "",
-	"main": "index.js",
-	"scripts": {
-		"start": "node index.js",
-		"dev": "nodemon index.js"
-	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
-	"dependencies": {
-		"@material-ui/icons": "^4.11.3",
-		"cors": "^2.8.5",
-		"express": "^4.17.1",
-		"nodemon": "^2.0.7",
-		"now": "^19.1.2",
-		"serve": "^14.0.1",
-		"socket.io": "^4.5.1"
-	}
+  "name": "videochat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "engines": {
+    "node": "14.17.5"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@material-ui/icons": "^4.11.3",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7",
+    "now": "^19.1.2",
+    "serve": "^14.0.1",
+    "socket.io": "^4.5.1"
+  }
 }
