@@ -1,7 +1,9 @@
 const app = require('express')();
 const server = require('http').createServer(app);
 const cors = require('cors');
-require('dotenv').config();
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config();
+}
 
 const io = require('socket.io')(server, {
   cors: {
@@ -11,7 +13,7 @@ const io = require('socket.io')(server, {
 });
 
 app.use(cors());
-const PORT = process.env.PORT;
+const port = process.env.PORT;
 
 app.get('/', (req, res) => {
   res.send('Running');
@@ -45,10 +47,9 @@ io.on('connection', (socket) => {
     io.to(data.to).emit('callAccepted', data.signal);
   });
 });
-server.listen(PORT, () => console.log(`Server is running on PORT ${PORT}`));
-
+server.listen(port, () => console.log(`Server is running on port ${port}`));
 
 // FOR PACKGAGE.JSON
- // "engines": {
-  //   "node": "16.11.1"
-  // },
+// "engines": {
+//   "node": "16.11.1"
+// },
