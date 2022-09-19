@@ -8,9 +8,6 @@
     "dev": "nodemon index.js",
     "build": "nodemon build"
   },
-  "engines": {
-    "node": "16.11.1"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",

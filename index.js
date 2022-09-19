@@ -46,3 +46,9 @@ io.on('connection', (socket) => {
   });
 });
 server.listen(PORT, () => console.log(`Server is running on PORT ${PORT}`));
+
+
+// FOR PACKGAGE.JSON
+ // "engines": {
+  //   "node": "16.11.1"
+  // },
