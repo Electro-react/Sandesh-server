@@ -11,9 +11,8 @@ const io = require('socket.io')(server, {
     methods: ['GET', 'POST'],
   },
 });
-
+const PORT = process.env.PORT;
 app.use(cors());
-const port = process.env.PORT;
 
 app.get('/', (req, res) => {
   res.send('Running');
@@ -47,9 +46,4 @@ io.on('connection', (socket) => {
     io.to(data.to).emit('callAccepted', data.signal);
   });
 });
-server.listen(port, () => console.log(`Server is running on port ${port}`));
-
-// FOR PACKGAGE.JSON
-// "engines": {
-//   "node": "16.11.1"
-// },
+server.listen(PORT, () => console.log(`Server is running on PORT ${PORT}`));

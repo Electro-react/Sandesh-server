@@ -4,10 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js",
-    "build": "nodemon build"
-  },
+  "build": "bower install && grunt build",
+  "start": "nf start"
+},
+  "engines": {
+  "node": "16.11.1"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
