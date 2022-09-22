@@ -4,13 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-  "postinstall": "./node_modules/bower/bin/bower install",
-  "build": "bower install && grunt build",
-  "start": "nf start"
-},
+    "build": "mkdir -p dist && cp -R src/* dist/",
+    "start": "netlify dev"
+  },
   "engines": {
-  "node": "16.11.1"
-},
+    "node": "16.11.1"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
