@@ -2,3 +2,5 @@
 node_modules/
 build/
 client/
+# Local Netlify folder
+.netlify
